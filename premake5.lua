@@ -10,7 +10,8 @@ project "ImGui"
     includedirs
 	{
 		"src",
-		"%{prj.location}"
+		"%{prj.location}",
+        "%{IncludeDir.stb}"
 	}
 
 	files
@@ -29,6 +30,11 @@ project "ImGui"
 
 		"misc/cpp/imgui_stdlib.h",
 		"misc/cpp/imgui_stdlib.cpp",
+	}
+
+    defines
+	{
+		"IMGUI_USE_STB_SPRINTF"
 	}
 
 	filter "system:windows"
